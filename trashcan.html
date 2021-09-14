@@ -1,0 +1,70 @@
+<head>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+  
+  <title>intermission maze</title>
+  
+  <link rel="stylesheet" href="css/mainstyle.css">
+  <link rel="stylesheet" href="css/menubar.css">
+  <link rel="stylesheet" href="css/window.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  
+</head>
+
+<body>
+  <div class="app_workspace">
+    <div class="sidebar">
+      <ul>
+        <li class="sidebar_item">
+          <ul>
+          <li><a><div class="sidebarIcon _desktop"></div>즐겨찾기</a></li>
+          <li><a><div class="sidebarIcon _docs"></div>iCloud</a></li>
+          <li><a><div class="sidebarIcon _music"></div>위치</a></li>
+          <li><a><div class="sidebarIcon _desktop"></div>태그</a></li>							
+          </ul>
+        </li>
+  
+      </ul>
+    </div>
+    
+    <div width="100%" height="20px" style="border-bottom: 1px solid #bcbcbc;"> 
+      <div style="float: left; font-size: 12px; font-weight: normal; margin-top:3px; margin-left: 10px;">휴지통</div>
+      <div style="float: right;">
+        <form>
+          <input type="button" onclick="clean()" value="비우기" style=" margin-top:3px; margin-right:10px; font-size: 9px;">
+        </form>
+      </div></div>
+
+    
+    
+    <div>
+      <div width="100px" style="z-index: 1;">
+        <img src="res/img/file-icon.png" width="50px" style="margin:10px 10px 0 10;">
+        <div style="font-size: 12px; font-weight: normal;"> 너의 걱정</div>
+      </div>
+      <div width="100px">
+        <img src="res/img/file-icon.png" width="50px" style="margin:10px 10px 0 10;">
+        <div style="font-size: 12px; font-weight: normal;"> 너의 불안</div>
+      </div>
+      <div width="100px">
+        <img src="res/img/file-icon.png" width="50px" style="margin:10px 10px 0 10;">
+        <div style="font-size: 12px; font-weight: normal;"> 나쁜 기억</div>
+      </div>
+    </div>
+
+    
+      <div class="contentarea">
+      <!-- Content Here -->
+      
+    </div>
+  
+    <div class="statusbar">
+      <div class="titlebar">3개의 항목</div>
+    </div>
+    <script type="text/javascript">
+      function clean() {
+        window.location.href = "clean.html";
+      }
+    </script>
+</body>

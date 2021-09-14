@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+  <title>CodePen - Iconifying Content - Calendar</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="style2.css">
+<SCRIPT LANGUAGE=JavaScript>
+function decrypt(pwd) {
+  const answer = '행복하자정예지생일축하해!!';
+  if(pwd == null || pwd.length <= 0) {
+		alert('PLEASE ENTER THE PASSWORD');
+		return;
+	}
+  if(pwd != answer){
+    alert("WRONG!");
+  }
+  else {
+    window.location.href = "../matrix/matrix.html";
+  }
+}
+
+</SCRIPT>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<br>
+	<br>
+	
+	<br>
+<center><div class="container">
+	<div><center><font color="#000" size="15pt">--------------</font><font color="#F82F62" size="15pt">ABOUT PASSWORD</center></font></div>
+
+	<img src="final_question.png" width="400px">
+	
+</div><center>
+
+
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="http://mkpurr.dothome.co.kr/monday/answp/script.js"></script>
+	<center><form action="javascript:decrypt(document.all.pass.value);">
+<input type='text' class=inp example name='pass' size='10'><input type=submit class="btn btn-primary example" value=OK>
+</form>
+	
+</center>	
+
+</body>
+</html>

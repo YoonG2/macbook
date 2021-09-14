@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;900&display=swap');
+
+
+
+.w_frame {
+	width:370px;
+	height:570px;
+	position:absolute;
+	top:3%;
+	left:3%;
+	background-image: url(https://k.kakaocdn.net/dn/cyzRou/btq1XLAfqKK/cLXaKOd9rXZtVLttrRvWw0/img.jpg);
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight:normal;
+	color:#000;
+	border-radius:5px;
+	border:1px #777 solid;
+	box-shadow:0 20px 25px rgba(0,0,0,0.7);
+	overflow:hidden;
+	z-index:4;
+}
+
+.app_frame {
+	width:100%;
+	height:28px;
+	background:linear-gradient(#eee,#bbb);
+	border-bottom:1px #777 solid;
+}
+
+.buttons {
+	width:55px;
+	height:12px;
+	position:absolute;
+	left:8px;
+	top:8px;
+	display:block;
+	background-image:url('../img/ui_button_1.png');
+	background-repeat:no-repeat;
+}
+
+.closeButton {
+	width:12px;
+	height:12px;
+	position:absolute;
+	left:0;
+	top:0;
+	background-color:transparent;
+}
+
+.minButton {
+	width:12px;
+	height:12px;
+	position:absolute;
+	left:20px;
+	top:0;
+	background-color:transparent;
+}
+
+.maxButton {
+	width:12px;
+	height:12px;
+	position:absolute;
+	left:40px;
+	top:0;
+	background-color:transparent;
+}
+
+
+.buttons:hover {
+	background-image:url('../img/ui_button_2.png');
+}
+
+.titlebar {
+	width:auto;
+	height:auto;
+	text-align:center;
+	line-height:12px;
+	font-size:10px;
+	margin:0 auto 0 auto;
+	padding-top:5px;
+}
+
+.searchbar {
+
+}
+
+.searchicon {
+
+}
+
+.searchicon:hover {
+	cursor:pointer;
+}
+
+.searchicon:after {
+	content:'';
+	width:8px;
+	height:8px;
+	position:absolute;
+	top:8px;
+	padding:0;
+	right:15px;
+	
+	border-radius:8px;
+	border:2px #999 solid;
+	background-color:transparent;
+}
+
+.searchicon:before {
+	content:'';
+	width:8px;
+	height:2px;
+	position:absolute;
+	top:19px;
+	right:11px;
+	transform:rotate(45deg);
+	
+	border:none;
+	border-radius:2px;
+	background-color:#999;
+}
+
+
+.toolbar {
+	width:370px;
+	height:23px;
+	position:absolute;
+	left:8px;
+	top:25px;
+	background-image:url('../img/toolbar.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	color:transparent;
+}
+
+.app_workspace {
+	width:100%;
+	height:100%;
+}
+
+.sidebar {
+	width:30%;
+	height:90%;
+	position:relative;
+	float:left;
+	background:linear-gradient(#EBF0FA,#DCE6FA);
+	border-right:1px #C3CED9 solid;
+	overflow:hidden;
+	text-wrap:none;
+	text-decoration:none;
+	text-decoration-line:none;
+}
+
+.sidebar_item {
+	margin-top:3px;
+	margin-left:5px;
+	list-style:none;
+	font-size:10px;
+	font-weight:bold;
+	color:#707e8c;
+	text-shadow:0 0 2px rgba(0,0,0,0.9) inset;
+}
+
+.sidebar_item ul li a , a:visited {
+	text-decoration:none;
+	text-decoration-line:none;
+	color:inherit;
+	cursor:url(../img/osx_cursor.cur), default;
+}
+
+.sidebar_item > ul > li {
+	margin-left:0px;
+	padding:1px;
+	padding-left:0px;
+	font-weight:normal;
+	line-height:20px;
+	color:#000;
+}
+
+.sidebar_item_selected {
+	border-top:1px #5ca4df solid;
+	border-bottom:1px #327ac2 solid;
+	background:linear-gradient(#71b9ea,#3687d2);
+	text-shadow:0 1px 1px #333;
+	color:#fff;
+}
+
+.sidebarIcon {
+	width:10px;
+	height:10px;
+	position:relative;
+	top:2px;
+	margin-right:3px;
+	overflow:hidden;
+	display:inline-block;
+	background-position:center center;
+	background-size:cover;
+}
+
+._app {
+	background-image:url('../img/osx_sidebar/applications.png');
+}
+
+._desktop {
+	background-image:url('../img/osx_sidebar/desktop.png');
+}
+
+._docs {
+	background-image:url('../img/osx_sidebar/documents.png');
+}
+
+._music {
+	background-image:url('../img/osx_sidebar/music.png');
+}
+
+.sidebar_item_selected ._app {
+	background-image:url('../img/osx_sidebar2/applications.png');
+}
+
+.sidebar_item_selected ._desktop {
+	background-image:url('../img/osx_sidebar2/desktop.png');
+}
+
+.sidebar_item_selected ._docs {
+	background-image:url('../img/osx_sidebar2/documents.png');
+}
+
+.sidebar_item_selected ._music {
+	background-image:url('../img/osx_sidebar2/music.png');
+}
+
+
+.contentarea {
+	width:84%;
+	height:90%;
+	top:0;
+	float:left;
+	padding:10px;
+	cursor:auto;
+	overflow:auto;
+}
+
+.statusbar {
+	position:absolute;
+	bottom:0;
+	float:left;
+	width:100%;
+	height:24px;
+	background:linear-gradient(#ddd,#bbb);
+	border-top:3px #bbb solid;
+}
+
+.statusbar:after {
+	position:absolute;
+	bottom:0;
+	float:left;
+	width:100%;
+	height:24px;
+	content:'';
+	border-top:1px #eee solid;
+	
+}
+	
+}
+

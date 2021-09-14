@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VtWindow.js - synthetic windowing javascript library</title>
+    <link rel="stylesheet" href="vtwindow.css">
+    <link rel="stylesheet" href="vtwindow-theme.material.css">
+    <link rel="stylesheet" href="vtwindow-theme.osx.css">
+    <script src="build/vtwindow.js"></script>
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        #wallpaper{
+            position: absolute;
+            
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+
+            background: rgb(206,220,231);
+            background: linear-gradient(to bottom, rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%);;
+        }
+    </style>
+
+    <!-- lion head file -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="res/css/style.css"/>
+    <link rel="stylesheet" href="res/css/desktop.css">
+    
+    <title>Mac OS X Lion CSS3 by Alessio Atzeni</title>
+    <meta name="description" content="Mac Os X Lion with CSS3 Experiment - I wanted to create with only use of CSS3 the boot, the login page and finally the desktop of the Mac OS X Lion." />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="res/js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="res/js/modernizr.js"></script>
+    <script type="text/javascript" src="res/js/fix-and-clock.js"></script>
+    <script type="text/javascript" src="res/js/window.js"></script>
+    
+    <link rel="canonical" href="http://www.alessioatzeni.com/mac-osx-lion-css3/" />
+</head>
+
+<body>
+  <!-- FAIL -->
+<div id="fail">
+	<div class="fail-browser-logo">
+    	<img src="res/img/apple-logo-login.png" alt="Mac OS X" />
+    </div>
+    <div class="fail-browser">
+        <p><strong>I'm sorry to inform you that your browser don't support CSS3 Animations!</strong></p> 
+        <p>This site uses features that <em>require</em> a modern browser - why not try <a href="http://www.mozilla.org/en-US/firefox/fx/" target="_blank" title="Download Firefox">Firefox</a> ?</p>
+    </div>
+</div>
+
+<!-- BOOT -->
+<div id="pageLoading">
+	<div class="loading">
+		<div class="apple-logo"></div>
+        <div class="spinner"></div>
+	</div>
+</div>
+
+<!-- LOGIN -->
+<div id="pageLogin">
+	<header id="headlogin">
+		<nav id="menu-dx-login">
+    	<ul>
+   			<li class="wireless"></li>
+    		<li class="time">
+    		<ul>
+				<li class="hours"> </li>
+    			<li class="point">:</li>
+    			<li class="min"> </li>
+        	</ul>
+    		</li>
+		</ul>
+    	</nav>
+    </header>
+	<div class="new-apple-logo"></div>
+    
+    <div class="user-avatar">
+        <div id="avatar">
+        <a href="#hide" class="hide" id="hide"></a>
+        <a href="#show" class="show" id="show"></a>
+        <div id="cover"></div>
+        <div class="ava-css">
+        <img src="res/img/Lion.gif" />
+        </div>
+        <div class="logName">
+        <p>정은경</p>
+        </div>
+        <div id="switch">
+        <div class="validate">
+        <form action="#page">
+        	<input type="password" id="password" placeholder="Password" />
+            <input type="submit" class="submit" />
+            <div class="tooltip-pass">
+            <p>비밀번호 힌트 : 최애생일 8자리</p>
+            </div>
+            </form>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+<!-- DESKTOP -->
+<div id="page">
+<header id="head">
+	<nav id="menu">
+    	<ul>
+        <li class="apple">
+        	<a href="#all">Apple</a>
+            <ul class="sublist">
+            <li><a href="#imsi" data-rel="show">예지쨩 생일 축하해</a></li>
+            <li>Software Updates...</li>
+            <li>App Store...</li>
+            <li class="divider"></li>
+            <li>System Preferences...</li>
+            <li>Dock
+            	<span class="arrow"></span>
+                <ul class="sublist-menu">
+                <li>Turn Hiding Off</li>
+                <li>Turn Magnification Off</li>
+                <li class="divider"></li>
+                <li>Position on Left</li>
+                <li>Position on Bottom</li>
+                <li>Position on Right</li>
+                <li class="divider"></li>
+                <li>Dock Preferences...</li>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li>Recent Items
+            	<span class="arrow"></span>
+                <ul class="sublist-menu">
+                <li class="disable">Applications</li>
+                <li class="divider"></li>
+                <li class="disable">Documents</li>
+                <li class="divider"></li>
+                <li class="disable">Servers</li>
+                <li class="divider"></li>
+                <li>Clear Menu</li>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li>Force Quit...</li>
+            <li class="divider"></li>
+            <li>Sleep</li>
+            <li>Restart...</li>
+            <li>Shut Down...</li>
+            <li class="divider"></li>
+            <li>Log Out...</li>
+            </ul>
+        </li>
+        <li class="here">
+        	<a href="#all">Birthday</a>
+        	<ul class="sublist">
+            <li><a href="#finder" data-rel="show">Canvas</a></li>
+            <li>Highlight</li>
+            <li>Erase</li>
+            <li>End</li>
+            <li>Restart</li>
+            <li class="divider"></li>
+            <li class="divider"></li>
+            <li>Use</li>
+            <li>Preferences</li>
+            </ul>
+        </li>
+        <li>
+        	<a href="#all">도움말</a>
+        	<ul class="sublist">
+            <li class="disable">모든 힌트는 순서대로</li>
+            <li class="disable">제목에 적힌 행동을 하고나서</li>
+            <li class="disable">뭘해야할지 모르겠을때</li>
+            <li class="disable">열어보세요!</li>
+            <li class="divider"></li>
+            <li class="disable">팝업으로 열리는 창은</li>
+            <li class="disable">왼쪽 위 노란색을 누르면</li>
+            <li class="disable">최소화돼서 아래에 작은 창이 뜨고</li>
+            <li class="disable">초록색은 최대화 버튼</li>
+            <li class="disable">창의 오른쪽 아래를 드래그하면</li>
+            <li class="disable">창 크기를 조절할 수 있어요</li>
+            <li class="divider"></li>
+            <li><a onclick="openWindow(ht0)">0. 이야기의 시작</a></li>
+            <li><a onclick="openWindow(ht1)">1. 노트북을 켰다면</a></li>
+            <li><a onclick="openWindow(ht2)">2. 왝챠에 들어갔다면</a></li>
+            <li><a onclick="openWindow(ht3)">3. 수상한 파일을 열어봤다면</a></li>
+            <li class="divider"></li>
+            <li class="disable">정말 모르겠다 싶을때</li>
+            <li>진짜 보려고?
+            	<span class="arrow"></span>
+                <ul class="sublist-menu">
+                <li><a onclick="openWindow(ht4)" style="color:black;">최후의 힌트</a></li>
+                </ul>
+            </li>
+            </ul>    
+        </li>
+      </ul>
+	</nav>
+    <nav id="menu-dx">
+    	<ul>
+        <li class="wireless">
+        	<a href="#all">Wireless</a>
+        </li>
+        <li class="time">
+        	<ul>
+            <li id="DateAbbr"> </li>
+            <li class="hour"> </li>
+    		<li class="point">:</li>
+    		<li class="mins"> </li>
+            </ul>
+        </li>
+        <li class="username">
+        	<a href="#all">정은경</a>
+        </li>
+		</ul>
+    </nav>
+</header>
+
+<div id="trash" class="window warning">
+	<div class="tab"></div>
+    <div class="container">
+    	<div class="container-alert">
+        <img src="res/img/FinderIcon.png" width="48px" height="48px" alt="alert"/>
+        <div class="about-alert">
+        <h2>Secure Empty Trash permanently erases the items in the Trash. Are you sure you want to permanently erase them?</h2>
+        <p>If you choose Secure Empty Trash, you can't recover the items unless you've backed them up using Time Machine or another backup program.</p>
+        <a href="#warning" class="button blink" data-rel="">Secure Empty Trash</a>
+        <a href="#trash" class="button simple" data-rel="close">Cancel</a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="desktop_item ui-draggable" style="position: relative;">
+  <div class="desktop_icon">
+    <a onclick="openWindow(w5)">
+      <img src="res/img/question.png" width="50px">
+    </a>
+  </div>
+  <div class="name">누가봐도 수상한 파일</div>
+</div>
+
+<!-- DOCK -->
+<div class="dock">
+	<ul>
+    	<li id="finderr">
+        	<a href="#warning" data-rel="showOp">
+            	<em><span>Finder</span></em>
+                <img src="res/img/FinderIcon.png" alt="Finder"/>
+            </a>
+        </li>
+        <li id="chrome">
+        	<a onclick="openWindow(w3)" data-rel="showOp">
+            	<em><span>Chrome</span></em>
+                <img src="res/img/Chrome-icon.png" alt="Chrome"/>
+            </a>
+        </li>
+        <li id="카카오톡">
+        	<a onclick="openWindow(w2)" data-rel="showOp">
+            	<em><span>카카오톡</span></em>
+                <img src="res/img/kakaotalk-icon.png" alt="카카오톡"/>
+            </a>
+        </li>
+        <li id="preview">
+        	<a href="#warning" data-rel="showOp">
+            	<em><span>Preview</span></em>
+                <img src="res/img/preview.png" alt="Preview"/>
+            </a>
+        </li>
+        <li id="iTunes">
+        	<a href="#warning" data-rel="showOp">
+            	<em><span>iTunes</span></em>
+                <img src="res/img/iTunes.png" alt="iTunes"/>
+            </a>
+        </li>
+        <li id="trash">
+        	<a onclick="openWindow(w4)" data-rel="showOp">
+            	<em><span>Trash</span></em>
+                <img src="res/img/trash.png" alt="Trash"/>
+            </a>
+        </li>
+    </ul>
+</div>
+
+</div>
+
+    <template id="m">
+        <div role="dialog" aria-label="" class="vt-window-material">
+            <div name="header" class="valign-wrapper indigo">
+                <span name="title">${content.title}</span>
+                <span name="controls">
+                    <button name="popout" class="btn-flat" title="Deattatch"><i class="material-icons">launch</i></button>
+                    <button name="minimize" class="btn-flat" title="Minimize"><i class="material-icons">remove</i></button>
+                    <button name="maximize" class="btn-flat" title="Maximize"><i class="material-icons">zoom_out_map</i></button>
+                    <button name="close" class="btn-flat" title="Close"><i class="material-icons">close</i></button>
+                </span>
+            </div>
+            <div name="body">
+                ${content.body}
+                <input type="text">
+            </div>
+            <div name="footer">
+                <div name="grab"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="osx">
+        <div role="dialog" aria-label="" class="vt-window-osx">
+            <div name="header" class="">
+                <span name="title">${content.title}</span>
+                <span name="controls">
+                    <button name="close" class="" title="Close"></button>
+                    <button name="minimize" class="" title="Minimize"></button>
+                    <button name="maximize" class="" title="Maximize"></button>
+                    <button name="popout" class="" title="Deattatch"></button>
+                </span>
+            </div>
+            <div name="body">
+                ${content.body}
+                <input type="text">
+            </div>
+            <div name="footer">
+                <div name="grab"></div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+
+        var w2 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        w2.setTitle('카카오톡');
+        w2.setBody(`<iframe width="100%" height="100%" src="html/kakaoclone/index.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        w2.top = 360;
+        w2.left = 480;
+        w2.width = 380;
+        w2.height = 700;
+        w2.mount();
+
+        var w3 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        w3.setTitle('Chrome');
+        w3.setBody(`<iframe width="100%" height="100%" src="search.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        w3.top = 360;
+        w3.left = 480;
+        w3.width = 900;
+        w3.height = 600;
+        //w3.mount();
+
+        var w4 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        w4.setTitle('휴지통');
+        w4.setBody(`<iframe width="100%" height="100%" src="trashcan.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        w4.top = 360;
+        w4.left = 480;
+        w4.width = 500;
+        w4.height = 300;
+        //w3.mount();
+
+        var w5 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        w5.setTitle('STRANGE FILE');
+        w5.setBody(`<iframe width="100%" height="100%" src="odd/main/main.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        w5.top = 360;
+        w5.left = 480;
+        w5.width = 900;
+        w5.height = 600;
+
+        var ht0 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        ht0.setTitle('0. 이야기의 시작');
+        ht0.setBody(`<iframe width="100%" height="100%" src="0번.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        ht0.top = 360;
+        ht0.left = 480;
+        ht0.width = 550;
+        ht0.height = 300;
+
+        var ht1 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        ht1.setTitle('1. 노트북을 켰다면');
+        ht1.setBody(`<iframe width="100%" height="100%" src="1번.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        ht1.top = 360;
+        ht1.left = 480;
+        ht1.width = 550;
+        ht1.height = 300;
+
+        var ht2 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        ht2.setTitle('2. 왝챠에 들어갔다면');
+        ht2.setBody(`<iframe width="100%" height="100%" src="2번.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        ht2.top = 360;
+        ht2.left = 480;
+        ht2.width = 550;
+        ht2.height = 300;
+
+        var ht3 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        ht3.setTitle('3. 수상한 파일을 열어봤다면');
+        ht3.setBody(`<iframe width="100%" height="100%" src="3번.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        ht3.top = 360;
+        ht3.left = 480;
+        ht3.width = 550;
+        ht3.height = 300;
+
+        var ht4 = new VtWindow(null, {template: osx.innerHTML, preserveFocusOrder: false});
+        ht4.setTitle('최후의 힌트');
+        ht4.setBody(`<iframe width="100%" height="100%" src="hint.html" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;"></iframe>`);
+        ht4.top = 360;
+        ht4.left = 480;
+        ht4.width = 550;
+        ht4.height = 330;
+
+        let instances = [];
+
+        function openWindow(win){
+          win.show();
+          win.mount();
+        }
+    
+      </script>
+    
+</body>
+
+</html>
